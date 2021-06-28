@@ -1,0 +1,40 @@
+const discoverData = [
+  {
+    id: 'discover-1',
+    title: '과거와 미래가 공존하는 도시',
+    location: 'South Korea',
+    image: require('../images/seoul.jpeg'),
+    imageBig: require('../images/seoul.jpeg'),
+    description: 'dfasjklfjklasjfklasjfkl',
+    liked: true,
+    price: 50,
+    rating: 5,
+    duration: 2,
+  },
+  {
+    id: 'discover-2',
+    title: '우수한 자연풍경을 지닌 섬',
+    location: 'Jeju',
+    image: require('../images/jeju.jpeg'),
+    imageBig: require('../images/jeju.jpeg'),
+    description: 'dfasjklfjklasjfklasjfkl',
+    liked: true,
+    price: 350,
+    rating: 4.5,
+    duration: 3,
+  },
+  {
+    id: 'discover-3',
+    title: '과거와 미래가 공존하는 도시',
+    location: 'Kyoto',
+    image: require('../images/kyoto.jpeg'),
+    imageBig: require('../images/kyoto.jpeg'),
+    description: 'dfasjklfjklasjfklasjfkl',
+    liked: false,
+    price: 250,
+    rating: 4,
+    duration: 2,
+  },
+];
+
+export default discoverData;
