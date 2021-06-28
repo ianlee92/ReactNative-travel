@@ -14,6 +14,10 @@
 		704D3CD50B1E10B7BA7FDD2C /* libPods-travelapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F7029B616254BA21EBB4F76 /* libPods-travelapp.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		D6F27802C3BA8A5E9DD42F37 /* libPods-travelapp-travelappTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B82475CEF612884AA9A634B /* libPods-travelapp-travelappTests.a */; };
+		EA89426C8539480FA79A5B43 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EA6697705ABB4E9F8BC2CCFA /* NotoSansKR-Bold.otf */; };
+		462622C6C0964626B45B8DD3 /* NotoSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9F3813E0F5914C609B9CEE3F /* NotoSansKR-Light.otf */; };
+		F12BE9EFEC2944548D7C259A /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0BAAECE8EAA54E10A3DD79B9 /* NotoSansKR-Regular.otf */; };
+		3F8488D0838647F990A70824 /* NotoSansKR-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF0840586F6A4DD08D0FA162 /* NotoSansKR-Thin.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = travelapp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAD83DAC6BD1B27C3B55BE13 /* Pods-travelapp-travelappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travelapp-travelappTests.release.xcconfig"; path = "Target Support Files/Pods-travelapp-travelappTests/Pods-travelapp-travelappTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		EA6697705ABB4E9F8BC2CCFA /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; name = "NotoSansKR-Bold.otf"; path = "../assets/fonts/NotoSansKR-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9F3813E0F5914C609B9CEE3F /* NotoSansKR-Light.otf */ = {isa = PBXFileReference; name = "NotoSansKR-Light.otf"; path = "../assets/fonts/NotoSansKR-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0BAAECE8EAA54E10A3DD79B9 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; name = "NotoSansKR-Regular.otf"; path = "../assets/fonts/NotoSansKR-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FF0840586F6A4DD08D0FA162 /* NotoSansKR-Thin.otf */ = {isa = PBXFileReference; name = "NotoSansKR-Thin.otf"; path = "../assets/fonts/NotoSansKR-Thin.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +130,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				E9C3C519EDD4B046293BB54F /* Pods */,
+				8B744346F2704409AE12BFFE /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -148,6 +157,18 @@
 			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		8B744346F2704409AE12BFFE /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				EA6697705ABB4E9F8BC2CCFA /* NotoSansKR-Bold.otf */,
+				9F3813E0F5914C609B9CEE3F /* NotoSansKR-Light.otf */,
+				0BAAECE8EAA54E10A3DD79B9 /* NotoSansKR-Regular.otf */,
+				FF0840586F6A4DD08D0FA162 /* NotoSansKR-Thin.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -245,6 +266,10 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				EA89426C8539480FA79A5B43 /* NotoSansKR-Bold.otf in Resources */,
+				462622C6C0964626B45B8DD3 /* NotoSansKR-Light.otf in Resources */,
+				F12BE9EFEC2944548D7C259A /* NotoSansKR-Regular.otf in Resources */,
+				3F8488D0838647F990A70824 /* NotoSansKR-Thin.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
