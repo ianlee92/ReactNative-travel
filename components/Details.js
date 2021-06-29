@@ -34,6 +34,10 @@ const Details = ({route, navigation}) => {
         <View style={styles.heartWrapper}>
           <Entypo name="heart" size={32} color={colors.orange} />
         </View>
+        <View style={styles.descriptionTextWrapper}>
+          <Text style={styles.descriptionTitle}>상세정보</Text>
+          <Text style={styles.descriptionText}>{item.description}</Text>
+        </View>
       </View>
     </View>
   );
@@ -94,8 +98,23 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
-
     elevation: 5,
+  },
+  descriptionTextWrapper: {
+    marginTop: 30,
+    marginHorizontal: 20,
+  },
+  descriptionTitle: {
+    fontFamily: 'NotoSansKR-Bold',
+    fontSize: 24,
+    color: colors.black,
+  },
+  descriptionText: {
+    marginTop: 20,
+    fontFamily: 'NotoSansKR-Light',
+    fontSize: 14,
+    color: colors.darkGray,
+    height: 85,
   },
 });
 
