@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Image, StyleSheet, ScrollView} from 'react-native';
+import {View, Text, Image, StyleSheet, ScrollView} from 'react-native';
 import colors from '../assets/colors/colors';
 import Feather from 'react-native-vector-icons/Feather';
 import activitiesData from '../assets/data/activitiesData';
@@ -8,8 +8,7 @@ import learnMoreDate from '../assets/data/learnMoreData';
 import discoverData from '../assets/data/discoverData';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import profile from '../assets/images/face.png';
-
-Feather.loadFont();
+import {FlatList} from 'react-native-gesture-handler';
 
 const Home = ({navigation}) => {
   return (
@@ -27,6 +26,28 @@ const Home = ({navigation}) => {
             <Image source={profile} style={styles.profileImage} />
           </View>
         </SafeAreaView>
+
+        {/* Discover */}
+        <View style={styles.discoverWrapper}>
+          <Text style={styles.discoverTitle}>발견하기</Text>
+          <View style={styles.discoverCategoriesWrapper}>
+            <Text style={[styles.discoverCategoryText, {color: colors.orange}]}>
+              All
+            </Text>
+            <Text style={styles.discoverCategoryText}>Destinations</Text>
+            <Text style={styles.discoverCategoryText}>Cities</Text>
+            <Text style={styles.discoverCategoryText}>Expreriences</Text>
+          </View>
+          <View style={styles.discoverItemWrapper}>
+            <FlatList
+              data={discoverData}
+              renderItem={renderDiscoverItem}
+              keyExtractor={item => item.id}
+              horizontal
+              showHorizontalScrollIndicator={false}
+            />
+          </View>
+        </View>
       </ScrollView>
     </View>
   );
@@ -48,6 +69,24 @@ const styles = StyleSheet.create({
     width: 52,
     height: 52,
     borderRadius: 10,
+  },
+  discoverWrapper: {
+    marginHorizontal: 20,
+    marginTop: 20,
+  },
+  discoverTitle: {
+    fontFamily: 'NotoSansKR-Bold',
+    fontSize: 32,
+  },
+  discoverCategoriesWrapper: {
+    flexDirection: 'row',
+    marginTop: 20,
+  },
+  discoverCategoryText: {
+    marginRight: 30,
+    fontFamily: 'NotoSansKR-Regular',
+    fontSize: 16,
+    color: colors.gray,
   },
 });
 
