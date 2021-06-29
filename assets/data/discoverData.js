@@ -2,7 +2,7 @@ const discoverData = [
   {
     id: 'discover-1',
     title: '과거와 미래가 공존하는 도시',
-    location: 'South Korea',
+    location: 'Seoul',
     image: require('../images/seoul.jpeg'),
     imageBig: require('../images/seoul.jpeg'),
     description:

@@ -1,16 +1,50 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet, ScrollView} from 'react-native';
+import {
+  View,
+  Text,
+  Image,
+  StyleSheet,
+  ScrollView,
+  ImageBackground,
+} from 'react-native';
 import colors from '../assets/colors/colors';
 import Feather from 'react-native-vector-icons/Feather';
+import Entypo from 'react-native-vector-icons/Entypo';
 import activitiesData from '../assets/data/activitiesData';
 import discoverCategoriesData from '../assets/data/discoverCategoriesData';
 import learnMoreDate from '../assets/data/learnMoreData';
 import discoverData from '../assets/data/discoverData';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import profile from '../assets/images/face.png';
-import {FlatList} from 'react-native-gesture-handler';
+import {FlatList, TouchableOpacity} from 'react-native-gesture-handler';
+
+Feather.loadFont();
 
 const Home = ({navigation}) => {
+  const renderDiscoverItem = ({item}) => {
+    return (
+      <TouchableOpacity
+        onPress={() =>
+          navigation.navigate('Details', {
+            item: item,
+          })
+        }>
+        <ImageBackground
+          source={item.image}
+          style={[
+            styles.discoverItem,
+            {marginLeft: item.id === 'discover-1' ? 20 : 0},
+          ]}
+          imageStyle={styles.discoverItemImage}>
+          <Text style={styles.discoverItemTitle}>{item.title}</Text>
+          <View style={styles.discoverItemLocationWrapper}>
+            <Entypo name="location-pin" size={18} color={colors.white} />
+            <Text style={styles.discoverItemLocationText}>{item.location}</Text>
+          </View>
+        </ImageBackground>
+      </TouchableOpacity>
+    );
+  };
   return (
     <View style={styles.container}>
       <ScrollView>
@@ -71,14 +105,16 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   discoverWrapper: {
-    marginHorizontal: 20,
+    // marginHorizontal: 20,
     marginTop: 20,
   },
   discoverTitle: {
+    marginHorizontal: 20,
     fontFamily: 'NotoSansKR-Bold',
     fontSize: 32,
   },
   discoverCategoriesWrapper: {
+    marginHorizontal: 20,
     flexDirection: 'row',
     marginTop: 20,
   },
@@ -87,6 +123,36 @@ const styles = StyleSheet.create({
     fontFamily: 'NotoSansKR-Regular',
     fontSize: 16,
     color: colors.gray,
+  },
+  discoverItemWrapper: {
+    paddingVertical: 20,
+  },
+  discoverItem: {
+    width: 170,
+    height: 250,
+    justifyContent: 'flex-end',
+    paddingHorizontal: 10,
+    paddingVertical: 15,
+    marginRight: 20,
+  },
+  discoverItemImage: {
+    borderRadius: 20,
+  },
+  discoverItemTitle: {
+    fontFamily: 'NotoSansKR-Bold',
+    fontSize: 18,
+    color: colors.white,
+  },
+  discoverItemLocationWrapper: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 5,
+  },
+  discoverItemLocationText: {
+    marginLeft: 5,
+    fontFamily: 'NotoSansKR-Bold',
+    fontSize: 14,
+    color: colors.white,
   },
 });
 
