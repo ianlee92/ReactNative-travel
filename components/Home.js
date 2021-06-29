@@ -60,6 +60,22 @@ const Home = ({navigation}) => {
       </View>
     );
   };
+
+  const renderLearnMoreItem = ({item}) => {
+    return (
+      <ImageBackground
+        source={item.image}
+        style={[
+          styles.learnMoreItem,
+          {
+            marginLeft: item.id === 'learnMore-1' ? 20 : 0,
+          },
+        ]}
+        imageStyle={styles.learnMoreItemImage}>
+        <Text style={styles.learnMoreItemText}>{item.title}</Text>
+      </ImageBackground>
+    );
+  };
   return (
     <View style={styles.container}>
       <ScrollView>
@@ -111,6 +127,20 @@ const Home = ({navigation}) => {
             />
           </View>
         </View>
+
+        {/* Learn More */}
+        <View style={styles.learnMoreWrapper}>
+          <Text style={styles.learnMoreTitle}>더 알아보기</Text>
+          <View style={styles.learnMoreItemsWrapper}>
+            <FlatList
+              data={learnMoreDate}
+              renderItem={renderLearnMoreItem}
+              keyExtractor={item => item.id}
+              horizontal
+              showHorizontalScrollIndicator={false}
+            />
+          </View>
+        </View>
       </ScrollView>
     </View>
   );
@@ -135,7 +165,6 @@ const styles = StyleSheet.create({
   },
   discoverWrapper: {
     // marginHorizontal: 20,
-    marginTop: 20,
   },
   discoverTitle: {
     marginHorizontal: 20,
@@ -206,6 +235,34 @@ const styles = StyleSheet.create({
     fontFamily: 'NotoSansKR-Bold',
     fontSize: 14,
     color: colors.gray,
+  },
+  learnMoreWrapper: {
+    marginTop: 10,
+  },
+  learnMoreTitle: {
+    marginHorizontal: 20,
+    fontFamily: 'NotoSansKR-Bold',
+    fontSize: 24,
+    color: colors.black,
+  },
+  learnMoreItemsWrapper: {
+    paddingVertical: 20,
+  },
+  learnMoreItem: {
+    width: 170,
+    height: 180,
+    justifyContent: 'flex-end',
+    marginRight: 20,
+  },
+  learnMoreItemImage: {
+    borderRadius: 20,
+  },
+  learnMoreItemText: {
+    fontFamily: 'NotoSansKR-Bold',
+    fontSize: 18,
+    color: colors.white,
+    marginHorizontal: 10,
+    marginVertical: 20,
   },
 });
 
