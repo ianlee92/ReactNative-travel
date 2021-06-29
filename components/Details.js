@@ -4,9 +4,9 @@ import {
   Text,
   StyleSheet,
   ImageBackground,
+  TouchableOpacity,
   Dimensions,
 } from 'react-native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
 import colors from '../assets/colors/colors';
 import Entypo from 'react-native-vector-icons/Entypo';
 
@@ -19,7 +19,7 @@ const Details = ({route, navigation}) => {
       <ImageBackground source={item.imageBig} style={styles.backgroundImage}>
         <TouchableOpacity
           style={styles.backIcon}
-          onpress={() => navigation.goBack()}>
+          onPress={() => navigation.goBack()}>
           <Entypo name="chevron-left" size={32} color={colors.white} />
         </TouchableOpacity>
         <View style={styles.titlesWrapper}>
