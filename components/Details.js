@@ -38,6 +38,29 @@ const Details = ({route, navigation}) => {
           <Text style={styles.descriptionTitle}>상세정보</Text>
           <Text style={styles.descriptionText}>{item.description}</Text>
         </View>
+        <View style={styles.infoWrapper}>
+          <View style={styles.infoItem}>
+            <Text style={styles.infoTitle}>가격</Text>
+            <View style={styles.infoTextWrapper}>
+              <Text style={styles.infoText}>{item.price}</Text>
+              <Text style={styles.infoSubText}>/인당</Text>
+            </View>
+          </View>
+          <View style={styles.infoItem}>
+            <Text style={styles.infoTitle}>평점</Text>
+            <View style={styles.infoTextWrapper}>
+              <Text style={styles.infoText}>{item.rating}</Text>
+              <Text style={styles.infoSubText}>/5</Text>
+            </View>
+          </View>
+          <View style={styles.infoItem}>
+            <Text style={styles.infoTitle}>기간</Text>
+            <View style={styles.infoTextWrapper}>
+              <Text style={styles.infoText}>{item.duration}</Text>
+              <Text style={styles.infoSubText}>시간 소요</Text>
+            </View>
+          </View>
+        </View>
       </View>
     </View>
   );
@@ -115,6 +138,33 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: colors.darkGray,
     height: 85,
+  },
+  infoWrapper: {
+    flexDirection: 'row',
+    marginHorizontal: 20,
+    marginTop: 20,
+    justifyContent: 'space-between',
+  },
+  infoItem: {},
+  infoTitle: {
+    fontFamily: 'NotoSansKR-Bold',
+    fontSize: 12,
+    color: colors.gray,
+  },
+  infoTextWrapper: {
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    marginTop: 5,
+  },
+  infoText: {
+    fontFamily: 'NotoSansKR-Bold',
+    fontSize: 24,
+    color: colors.orange,
+  },
+  infoSubText: {
+    fontFamily: 'NotoSansKR-Bold',
+    fontSize: 14,
+    color: colors.gray,
   },
 });
 
