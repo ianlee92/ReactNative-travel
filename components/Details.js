@@ -61,6 +61,11 @@ const Details = ({route, navigation}) => {
             </View>
           </View>
         </View>
+        <TouchableOpacity
+          style={styles.buttonWrapper}
+          onPress={() => alert('예약이 완료되었습니다!')}>
+          <Text style={styles.buttonText}>예약하러 가기</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -142,7 +147,7 @@ const styles = StyleSheet.create({
   infoWrapper: {
     flexDirection: 'row',
     marginHorizontal: 20,
-    marginTop: 20,
+    marginTop: 13,
     justifyContent: 'space-between',
   },
   infoItem: {},
@@ -165,6 +170,19 @@ const styles = StyleSheet.create({
     fontFamily: 'NotoSansKR-Bold',
     fontSize: 14,
     color: colors.gray,
+  },
+  buttonWrapper: {
+    marginHorizontal: 20,
+    marginTop: 20,
+    backgroundColor: colors.orange,
+    alignItems: 'center',
+    paddingVertical: 15,
+    borderRadius: 10,
+  },
+  buttonText: {
+    fontFamily: 'NotoSansKR-Bold',
+    fontSize: 18,
+    color: colors.white,
   },
 });
 
